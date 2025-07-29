@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pribadi Sederhana</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f2f7; /* Light blue background */
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #00796b; /* Darker teal for header */
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav {
+            background-color: #004d40; /* Even darker teal for nav */
+            padding: 0.8rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #80cbc4; /* Lighter teal on hover */
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex; /* Using Flexbox for layout */
+            flex-wrap: wrap; /* Allow items to wrap to next line */
+            gap: 20px; /* Space between flex items */
+        }
+        .main-content {
+            flex: 2; /* Takes more space */
+            min-width: 300px; /* Minimum width for main content */
+        }
+        .sidebar {
+            flex: 1; /* Takes less space */
+            background-color: #f0f4c3; /* Light yellow-green for sidebar */
+            padding: 15px;
+            border-radius: 5px;
+            min-width: 200px; /* Minimum width for sidebar */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00796b;
+            color: white;
+            margin-top: 30px;
+        }
+        h2 {
+            color: #00796b;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Website Saya</h1>
+    </header>
+    <nav>
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang Saya</a>
+        <a href="#services">Layanan</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Tentang Kami</h2>
+            <p>Ini adalah contoh website sederhana yang dibangun tanpa menggunakan elemen tabel untuk tata letak. Kami menggunakan **CSS Flexbox** untuk mengatur posisi elemen agar lebih fleksibel dan responsif.</p>
+            <p>Tujuan utama website ini adalah untuk mendemonstrasikan bagaimana CSS modern dapat digunakan untuk membuat desain layout yang bersih dan adaptif di berbagai ukuran layar.</p>
+
+            <h2>Layanan Kami</h2>
+            <ul>
+                <li>Desain Web Responsif</li>
+                <li>Pengembangan Aplikasi Mobile</li>
+                <li>Konsultasi IT</li>
+                <li>Optimasi SEO</li>
+            </ul>
+        </div>
+        <div class="sidebar">
+            <h3>Informasi Tambahan</h3>
+            <p>Temukan artikel menarik dan tips berguna di bagian sidebar ini. Kami selalu update dengan tren teknologi terbaru.</p>
+            <ul>
+                <li><a href="#">Artikel Terbaru 1</a></li>
+                <li><a href="#">Panduan CSS Flexbox</a></li>
+                <li><a href="#">Tips Produktivitas</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Website Pribadi Sederhana. Hak Cipta Dilindungi.</p>
+    </footer>
+</body>
+</html>
