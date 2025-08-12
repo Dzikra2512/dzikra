@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Formulir Neumorphism</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Warna latar dan elemen harus senada untuk efek neumorphism */
+            background-color: #e0e0e0;
+            color: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 550px;
+            padding: 30px 40px;
+            background-color: #e0e0e0;
+            border-radius: 40px;
+            /* Bayangan utama yang membuat container 'timbul' */
+            box-shadow: 20px 20px 60px #bebebe,
+                        -20px -20px 60px #ffffff;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+        }
+        .header p {
+            color: #777;
+        }
+
+        /* Media */
+        .media-display {
+            margin-bottom: 30px;
+        }
+        .media-display img,
+        .media-display video {
+            width: 100%;
+            display: block;
+            border-radius: 20px;
+            /* Efek neumorphism pada media */
+            box-shadow: 8px 8px 15px #bebebe,
+                        -8px -8px 15px #ffffff;
+        }
+        .media-display video {
+            margin-top: 20px;
+        }
+        
+        /* Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: none; /* Border dihilangkan, diganti shadow */
+            outline: none;
+            border-radius: 20px;
+            font-size: 16px;
+            background: #e0e2e0;
+            box-sizing: border-box;
+            /* Bayangan 'tertekan' ke dalam */
+            box-shadow: inset 8px 8px 15px #bebebe,
+                        inset -8px -8px 15px #ffffff;
+        }
+        
+        /* Tombol */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .btn {
+            flex-grow: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            background: #e0e0e0;
+            transition: box-shadow 0.2s ease-in-out;
+            /* Bayangan 'timbul' untuk tombol */
+            box-shadow: 8px 8px 15px #bebebe,
+                        -8px -8px 15px #ffffff;
+        }
+        /* Efek saat tombol ditekan */
+        .btn:active {
+            box-shadow: inset 8px 8px 15px #bebebe,
+                        inset -8px -8px 15px #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header">
+            <h2>Form Pendaftaran</h2>
+            <p>Silakan isi data diri Anda</p>
+        </div>
+        
+        <div class="media-display">
+            <img src="anime.jpg" alt="Gambar Contoh">
+            <video src="anime.mp4" controls></video>
+        </div>
+
+        <div class="form-content">
+            <form>
+                <input type="hidden" name="user_id" value="12345">
+                
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <textarea id="alamat" name="alamat" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="berkas">Unggah Foto Profil</label>
+                    <input type="file" id="berkas" name="foto" accept="image/*">
+                </div>
+                
+                <div class="button-group">
+                    <button type="reset" class="btn">Reset</button>
+                    <button type="submit" class="btn">Daftar</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

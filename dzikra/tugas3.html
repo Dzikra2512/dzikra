@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Sederhana</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Header dan Footer */
+        .header, .footer {
+            background-color: #12718a;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .footer p {
+            font-size: 1em;
+        }
+
+        /* Container untuk Sidebar dan Konten */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap; /* Izinkan item untuk turun baris */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar-kiri, .sidebar-kanan, .konten {
+            padding: 20px;
+            border-radius: 5px; 
+        }
+
+        .sidebar-kiri, .sidebar-kanan {
+            flex: 1 1 200px; /* Lebar dasar 200px, bisa tumbuh dan menyusut */
+            background-color: #f2f2f2;
+        }
+        
+        .konten {
+            flex: 2 1 400px; /* Lebih besar dari sidebar */
+            background-color: #ffffff; /* Warna putih agar lebih menonjol */
+        }
+        .sidebar-kiri h3 {
+            margin-bottom: 10px;
+        }
+        .sidebar-kiri ul {
+            list-style-type: none; 
+        }
+        .sidebar-kiri li {
+            margin-bottom: 5px;
+        }
+        .sidebar-kiri a {
+            text-decoration: none;
+            color: #12718a;
+            font-size: 1.1em;
+            transition: color 0.2s; /* Efek hover halus */
+        }
+        /* Tambahan: Efek hover pada menu */
+        .sidebar-kiri a:hover {
+            color: #0d5a6f;
+        }
+
+        .sidebar-kanan h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .sidebar-kanan img {
+            width: 100%; 
+            height: auto;
+            display: block; 
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+        
+        .konten h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .konten p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        /* CSS untuk layar kecil (di bawah 768px) */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column; /* Susun kolom ke bawah */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Sate Legendaris Pak Sat</h1>
+    </div>
+
+    <div class="main-content">
+        <div class="sidebar-kiri">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Lokasi</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </div>
+        
+        <div class="konten">
+            <h2>Kelezatan Sate Padang yang Melegenda</h2>
+            <p>Di jantung kota Padang, berdirilah sebuah warung sate sederhana milik <strong>Pak Sat</strong>, seorang maestro sate yang namanya telah menjadi buah bibir. Satenya sangat diminati oleh semua kalangan, mulai dari generasi milenial hingga gen Z, yang rela antre untuk merasakan racikan bumbu khasnya.</p>
+            <p>Meskipun harganya terbilang premium, para pelanggan setianya setuju bahwa setiap tusuknya sepadan dengan kualitas daging pilihan dan saus kental yang kaya rempah. Ini bukan sekadar sate, ini adalah warisan kuliner yang dijaga dengan sepenuh hati.</p>
+        </div>
+
+        <div class="sidebar-kanan">
+            <h3>Sate Padang Pak Sat</h3>
+            
+        </div>
+
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2025 Warung Sate Pak Sat. Hak Cipta Dilindungi.</p>
+    </div>
+
+</body>
+</html>
